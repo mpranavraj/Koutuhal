@@ -1,3 +1,13 @@
+
+
+// Import images (assuming Vite/Webpack will handle these imports)
+// If not using dynamic imports, we might need to rely on public folder or standard imports
+// For now, let's assume we can use relative paths or imports if we change the file extension to .tsx or rely on Vite's asset handling.
+// Actually, in Vite/React, usually we put images in `public` or import them.
+// Let's use the `src/assets` approach and assume imports. 
+// However, since this is a .ts data file, we can't easily import images without type defs or changing to .tsx.
+// BETTER APPROACH: Move images to `public/mentors/` and use absolute string paths.
+
 export interface Mentor {
   id: number;
   name: string;
@@ -12,6 +22,9 @@ export interface Mentor {
   isAlumni?: boolean;
 }
 
+// NOTE: Images should be placed in `public/mentors/` for these paths to work directly.
+// We will move the copied images to `public/mentors` in the next step.
+
 export const mentors: Mentor[] = [
   {
     id: 1,
@@ -20,7 +33,7 @@ export const mentors: Mentor[] = [
     company: "Meta",
     experience: "8+ years",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop",
+    image: "/mentors/shehzaad.png",
     linkedin: "https://linkedin.com",
     availability: "available",
     skills: ["AI Research", "Deep Learning", "NLP"],
@@ -32,7 +45,7 @@ export const mentors: Mentor[] = [
     company: "McKinsey",
     experience: "7+ years",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&auto=format&fit=crop",
+    image: "/mentors/koushik.png",
     linkedin: "https://linkedin.com",
     availability: "limited",
     skills: ["Product Strategy", "Consulting", "AI Products"],
@@ -44,7 +57,7 @@ export const mentors: Mentor[] = [
     company: "Optiv",
     experience: "10+ years",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop",
+    image: "/mentors/arvind.jpg",
     linkedin: "https://linkedin.com",
     availability: "available",
     skills: ["Cybersecurity", "Risk Management", "Enterprise Security"],
@@ -56,7 +69,7 @@ export const mentors: Mentor[] = [
     company: "Bain Consulting",
     experience: "12+ years",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop",
+    image: "/mentors/rakind.jpg",
     linkedin: "https://linkedin.com",
     availability: "waitlist",
     skills: ["Strategy", "Business Transformation", "Leadership"],
@@ -68,7 +81,7 @@ export const mentors: Mentor[] = [
     company: "Barter",
     experience: "10+ years",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop",
+    image: "/mentors/ronit.jpg",
     linkedin: "https://linkedin.com",
     availability: "limited",
     skills: ["Entrepreneurship", "Startups", "Product Building"],
@@ -80,10 +93,10 @@ export const mentors: Mentor[] = [
     company: "Finish Line Athlete",
     experience: "8+ years",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&auto=format&fit=crop",
+    image: "/mentors/udayan.jpg",
     linkedin: "https://linkedin.com",
     availability: "available",
-    skills: ["Sports Tech", "Entrepreneurship", "Growth"],
+    skills: ["Sports Tech", "Entrepreneurship", "Mentored 50+ students"],
   },
   {
     id: 7,
@@ -92,10 +105,10 @@ export const mentors: Mentor[] = [
     company: "Salesforce",
     experience: "8+ years",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop",
+    image: "/mentors/shireen.jpg",
     linkedin: "https://linkedin.com",
     availability: "available",
-    skills: ["Software Engineering", "Cloud", "System Design"],
+    skills: ["Software Engineering", "Cloud", "Mentored 50+ students"],
   },
   {
     id: 8,
@@ -104,10 +117,10 @@ export const mentors: Mentor[] = [
     company: "Qualcomm",
     experience: "8+ years",
     rating: 4.9,
-    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=400&auto=format&fit=crop",
+    image: "/mentors/aditya.jpg",
     linkedin: "https://linkedin.com",
     availability: "limited",
-    skills: ["Hardware", "Embedded Systems", "AI Chips"],
+    skills: ["Hardware", "AI Chips", "Mentored 50+ students"],
   },
   {
     id: 9,
@@ -168,10 +181,10 @@ export const mentorCompanies = [
   "Meta",
   "McKinsey",
   "Salesforce",
-  "PayPal",
-  "Adobe",
-  "Qualcomm",
+  "Optiv",
   "Bain Consulting",
+  "Qualcomm",
+  "Barter",
 ];
 
 export const mentorIndustries = [
